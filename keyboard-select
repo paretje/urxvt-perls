@@ -451,6 +451,8 @@ sub activate {
 	$self->{dollar} = 0;
 	$self->{move_to} = 0;
 
+	$self->cmd_parse("\033[?12l\033[?25h");
+
 	if ($search) {
 		$self->{search} = '?';
 		$self->{search_dir} = -1;
